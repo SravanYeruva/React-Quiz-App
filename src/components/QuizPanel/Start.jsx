@@ -2,10 +2,10 @@ import React from "react";
 
 function Start({ onStart }) {
   return (
-    <div className="flex bg-orange-500  items-center h-screen  w-full  justify-center">
+    <div className="flex items-center justify-center w-full h-screen bg-orange-500">
       <button
         onClick={onStart}
-        className="font-extrabold bg-green-500 p-4 rounded-2xl shadow-lg text-white text-3xl"
+        className="p-4 text-3xl font-extrabold text-white bg-green-500 shadow-lg rounded-2xl"
       >
         Start Quiz
       </button>

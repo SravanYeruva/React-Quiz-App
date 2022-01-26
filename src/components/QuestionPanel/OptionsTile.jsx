@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function OptionsTile({ options, onSelect, chosen }) {
   const chooseOptionHandler = (option) => {

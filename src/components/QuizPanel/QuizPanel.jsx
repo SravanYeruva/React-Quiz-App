@@ -77,15 +77,15 @@ function QuizPanel() {
     <div className="flex justify-center w-full">
       {warningPopUp && <WarningPopUp onOkay={() => closeWarning()} />}
 
-      <div className="m-5 max-w-4xl w-11/12">
+      <div className="w-11/12 max-w-4xl m-5">
         <div className="flex items-center justify-between">
-          <button className="p-2 bg-red-500 invisible rounded-lg shadow-md text-white font-bold m-2">
+          <button className="invisible p-2 m-2 font-bold text-white bg-red-500 rounded-lg shadow-md">
             Submit Quiz
           </button>
           <Timer onSubmit={submitHandler} second={seconds} minute={minutes} />
           <button
             onClick={submitHandler}
-            className="p-2 bg-red-500 rounded-lg shadow-md text-white font-bold m-2"
+            className="p-2 m-2 font-bold text-white bg-red-500 rounded-lg shadow-md"
           >
             Submit Quiz
           </button>
@@ -104,7 +104,7 @@ function QuizPanel() {
             chosen={questionsStatus[currentQuestion]["chosen"]}
           />
         </div>
-        <div className="flex justify-between flex-wrap">
+        <div className="flex flex-wrap justify-between">
           <button
             onClick={prevQuestionHandler}
             className={`p-2  bg-green-500 rounded-lg shadow-md text-white font-bold m-2 ${
@@ -113,18 +113,18 @@ function QuizPanel() {
           >
             Previous Question
           </button>
-          {questionsList.length !== currentQuestion + 1 && (
-            <button
-              onClick={markForReviewHandler}
-              className="p-2 bg-green-500 rounded-lg shadow-md text-white font-bold m-2"
-            >
-              Mark for Review
-            </button>
-          )}
+
+          <button
+            onClick={markForReviewHandler}
+            className="p-2 m-2 font-bold text-white bg-green-500 rounded-lg shadow-md"
+          >
+            Mark for Review
+          </button>
+
           {questionsList.length !== currentQuestion + 1 && (
             <button
               onClick={nextQuestionHandler}
-              className="p-2 bg-green-500 rounded-lg shadow-md text-white font-bold m-2"
+              className="p-2 m-2 font-bold text-white bg-green-500 rounded-lg shadow-md"
             >
               Next Question
             </button>
